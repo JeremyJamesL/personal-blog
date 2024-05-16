@@ -1,0 +1,19 @@
+.post h2, h3, h4, h5 {
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+
+.post h2 {
+    font-size: 1.3rem;
+}
+
+
+.post h3 {
+    font-size: 1.2rem;
+}
+
+.post p {
+    margin-bottom: 1rem;
+    text-align: justify;
+}

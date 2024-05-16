@@ -1,0 +1,34 @@
+{% set menu = [
+        {
+            name: 'Home',
+            slug: '/'
+        },
+        {
+            name: 'Posts',
+            slug: '/posts'
+        },
+        {
+            name: 'Photos',
+            slug: '/photos'
+        },
+        {
+            name: 'Now',
+            slug: '/now'
+        }
+    ]
+%}
+
+<header class="bg-orange-50 border-b-2 border-orange-950">
+    <div class="max-w-4xl m-auto text-center flex flex-col items-center px-5 py-4 sm:flex-row sm:justify-between">
+        <div class="mb-5 sm:mb-0"><a href="/" class="font-bold text-xl underline decoration-double orange-950">Jeremy Luscombe</a></div>
+        <nav>
+            <ul class="flex justify-around gap-6 text-lg font-bold">
+                {% for item in menu %}
+                    <li class="">
+                        <a href={{item.slug}} class="leading-none border-b-2 border-dotted hover:border-solid border-orange-950">{{item.name}}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+</header>

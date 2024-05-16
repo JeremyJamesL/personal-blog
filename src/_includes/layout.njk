@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ '/assets/css/tailwind.css' | url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body class="relative font-serif bg-orange-100 min-h-screen">   
+    {% include "components/header.njk" %}
+    <main class="py-10 max-w-4xl px-5 m-auto">
+        {{content | safe}}
+    </main> 
+    {% include "components/footer.njk" %}
+</body>
+</html>
+
