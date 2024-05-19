@@ -1,9 +1,62 @@
 ---
 layout: layout.njk
 title: What i'm doing now
+date: Last Modified
 ---
 
-<h1 class="text-center font-bold text-2xl underline decoration-double orange-950 mb-5">{{title}}</h1>
-<div class="text-center">
-    <h2 class="font-bold text-xl border-b-2 border-dotted hover:border-solid border-orange-950 inline">Reading 📖</h2>
-</div>
+{% set recentlyRead = books.data.justRead%}
+
+<header class="text-left mb-8">
+    <h1 class="text-left font-bold text-2xl underline decoration-double orange-950 mb-5">{{title}}</h1>
+    <p class="italic text-left">(This is a <a href="https://nownownow.com/about">now</a> page, which I prefer to about and was last updated on: {{page.date | toISOString}} )</p>
+</header>
+<section class="text-left mb-8">
+    <h2 class="font-bold text-xl border-b-2 mb-5 border-dotted hover:border-solid border-orange-950 inline-block">Work 💼</h2>
+    <p>I'm currently working at <a href="https://algolia.com">Algolia</a> as a Solutions Engineer. You can check out my "professional site" over <a href="https://jezl.xyz">here</a>, where I write more about tech bits</p>
+</section>
+
+<section class="text-left mb-8">
+    <h2 class="font-bold text-xl border-b-2 mb-5 border-dotted hover:border-solid border-orange-950 inline-block">Reading 📖</h2>
+    <div class="hidden sm:grid sm:grid-cols-2 sm:gap-5 mb-2">
+        <h2 class="italic">Currently reading...</h2>
+        <h2 class="italic">Just finished</h2>
+    </div>
+    <div class="grid grid-cols-4 grid-rows-none sm:grid-rows-auto sm:gap-5 align-top">
+        <div class="col-span-4 row-span-1 sm:col-span-2 sm:row-span-2 mb-2">
+            <img class="w-full h-auto" src="/assets/images/daa.jpg">
+        </div>
+            <img class="hidden sm:block w-full h-auto col-span-2 row-span-1 sm:col-span-1 sm:row-span-1" src="/assets/images/siddharta.jpg" alt="" >
+            <img class="hidden sm:block  w-full h-auto col-span-2 row-span-1 sm:col-span-1 sm:row-span-1" src="/assets/images/js.jpg" alt="" >
+            <img class="hidden sm:block  w-full h-auto col-span-2 row-span-1 sm:col-span-1 sm:row-span-1" src="/assets/images/low-life.jpg" alt="" >
+    </div> 
+
+
+
+
+    {# <div class="flex justify-between gap-5">
+        <div>
+            <img src="https://m.media-amazon.com/images/I/91C+iQcHMTL._AC_UF894,1000_QL80_.jpg" alt="" class="w-full h-auto m-auto">
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2">
+            <img src="https://cdn.hardcover.app/enlarge?url=https://storage.googleapis.com/hardcover/edition/30576942/961732-L.jpg&width=101&height=150&type=webp" alt="" class="w-full h-auto m-auto">
+            <img src="https://m.media-amazon.com/images/I/91C+iQcHMTL._AC_UF894,1000_QL80_.jpg" alt="" class="w-full h-auto m-auto">
+            <img src="https://m.media-amazon.com/images/I/91C+iQcHMTL._AC_UF894,1000_QL80_.jpg" alt="" class="w-full h-auto m-auto">
+            <img src="https://m.media-amazon.com/images/I/91C+iQcHMTL._AC_UF894,1000_QL80_.jpg" alt="" class="w-full h-auto m-auto">
+        </div>
+    </div> #}
+
+
+</section>
+{{recentlyread | dump}}
+
+<section class="text-left mb-8">
+    <h2 class="font-bold text-xl border-b-2 mb-5 border-dotted hover:border-solid border-orange-950 inline-block">Software 💻</h2>
+    <p>I've got a partcular interest in the concept of self-hosted software at the moment. Moving towards a decentralised internet. Creating sites on a VPS and hosting my own <a href="mailto:hello@jezl.xyz">email server</a> are small steps i've already taken in this area.</p>
+    <p>I plan to do more, however. Including:</p>
+    <ul class="">
+        <li class="">Host my own Photos application, moving off Google Photos.</li>
+        <li class="">Host my own Calibre instance on my VPS</li>
+        <li class="">Create my own cloud storage system with <a href="https://nextcloud.com/">NextCloud</a></li>
+    </ul>
+</section>
+
